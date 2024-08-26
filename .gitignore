@@ -1,0 +1,21 @@
+# Visual Studio files and directories
+.vs/
+*.suo
+*.user
+*.log
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.idb
+*.tlog
+*.lastbuildstate
+*.ipch
+*.pch
+*.res
+
+# Build directories
+/bin/
+/x64/
+/Debug/
+/Release/
