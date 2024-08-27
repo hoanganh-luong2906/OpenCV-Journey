@@ -19,3 +19,6 @@
 /x64/
 /Debug/
 /Release/
+
+#Local source for personal config only
+source.txt
