@@ -1,5 +1,6 @@
 ﻿#include <opencv2/opencv.hpp>
 #include <iostream>
+#include <vector>
 
 using namespace cv;
 using namespace std;
@@ -29,10 +30,14 @@ int main(int argc, char* agrv[])
 	image.convertTo(imageConstrastDouble, -1, 2, 0);
 
 	// Equalize image's histogram
-	cvtColor(image, image, COLOR_BGR2GRAY); //Chang image's color to grayscale
+	Mat equalizedImage;
+	cvtColor(image, equalizedImage, COLOR_BGR2YCrCb); //Chang image's color to YCrCb color format
 
-	Mat imageHistEqualized;
-	equalizeHist(image, imageHistEqualized);
+	vector<Mat> vectorChannels;
+	split(equalizedImage, vectorChannels);
+	equalizeHist(vectorChannels[0], vectorChannels[0]); //Equalize the histogram of the Y channel
+	merge(vectorChannels, equalizedImage); //Merge 3 channels including the modified Y channel
+	cvtColor(equalizedImage, equalizedImage, COLOR_YCrCb2BGR); //Convert the image back to BGR color format
 
 
 	string windowNameOriginalImage = "Original Image";
@@ -48,7 +53,7 @@ int main(int argc, char* agrv[])
 	imshow(windowNameOriginalImage, image);
 	imshow(windowNameContrastDouble, imageConstrastDouble);
 	imshow(windowNameBrightnessHigh100, imageBrightnessHigh100);
-	imshow(windowNameHistEqualized, imageHistEqualized);
+	imshow(windowNameHistEqualized, equalizedImage);
 	
 	waitKey(0);
 	destroyAllWindows();

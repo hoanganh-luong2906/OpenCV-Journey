@@ -1,7 +1,5 @@
 # ninja log v5
-1	2940	7466302649573135	CMakeFiles/ImageAdjustment.dir/ImageAdjustment.cpp.obj	bba0af8abf0db645
-2942	3303	7466302652900675	ImageAdjustment.exe	c1ec5ac0ddbd66e2
-30	4783	7466769162929527	CMakeFiles/ImageAdjustment.dir/ImageAdjustment.cpp.obj	bba0af8abf0db645
-4783	5266	7466769167109531	ImageAdjustment.exe	c1ec5ac0ddbd66e2
 24	3726	7466926271182499	CMakeFiles/ImageAdjustment.dir/ImageAdjustment.cpp.obj	bba0af8abf0db645
 3727	4204	7466926275212507	ImageAdjustment.exe	c1ec5ac0ddbd66e2
+13	4062	7466975702381016	CMakeFiles/ImageAdjustment.dir/ImageAdjustment.cpp.obj	bba0af8abf0db645
+4063	4352	7466975704616126	ImageAdjustment.exe	c1ec5ac0ddbd66e2
